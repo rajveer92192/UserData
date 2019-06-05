@@ -1,0 +1,50 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="demo"></div>
+
+<div class="container"  >
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm" style="width:400px;margin-left:400px;">
+            <legend><a href="http://www.jquery2dotnet.com"></a>Sign Up To Continue</legend>
+            <form  ngNativeValidate #form="ngForm"  (ngSubmit)="signUp(form.value)" method="post" class="form" >
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" ngModel name="firstname" placeholder="First Name" type="text"
+                        required autofocus />
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control" ngModel name="lastname" placeholder="Last Name" type="text"  />
+                </div>
+            </div>
+            <input class="form-control" ngModel name="email" placeholder="Your Email" type="email"  required/>
+            <input class="form-control" ngModel name="password" placeholder="Password" type="password"  minlength="6"  required/>
+            <input class="form-control" ngModel name="reenterpassword" placeholder="Re-enter Password" minlength ="6" type="password" required/>
+            <label for="">
+                Birth Date</label>
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <input ngModel type="date" class ="form-control" name="dob" required>
+                </div>
+               
+            </div>
+            <label for="">
+                    Gender &nbsp;</label>
+            <label class="radio-inline"> 
+                <input type="radio" ngModel name="sex" id="inlineCheckbox1" value="Male"  required/>
+                Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio"ngModel name="sex" id="inlineCheckbox2" value="Female" required/>
+                Female
+            </label>
+            <br />
+            <br />
+            <button  class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>

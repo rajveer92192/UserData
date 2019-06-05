@@ -1,0 +1,39 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <div class="row">
+    <div class="upper">
+      <br>
+      <button type="button" (click) = "logout()" class="btn btn-primary">Log Out</button>
+    </div>
+
+    <div>
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Sr No.</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+
+            <tr *ngFor = "let userData of user; let i = index" >
+                <td>{{i+1}}</td>
+                <td>{{userData.email}}</td>
+                <td>{{userData.firstname}} {{userData.lastname}}</td>
+                <td>{{userData.password}}</td>
+                <td>{{userData.dob}}</td>
+                <td>{{userData.sex}}</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' (click) = "edit(userData , i)"><span class="glyphicon glyphicon-edit"></span> Edit</a>&nbsp; <a (click) = "delete(i)" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+    </table>
+    </div>
+  </div>
+</div>

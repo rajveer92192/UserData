@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <form  ngNativeValidate #form="ngForm" (ngSubmit)="update(form.value)" method="post" class="form" >
+        <div class="middle">
+          <h1></h1>
+          <div class="middleInner">
+              <label style="width: 100px;">First Name</label>
+            <input type="text" name="firstname" class="form-control" [(ngModel)]="data.firstname" required>
+          </div>
+          <div class="middleInner">
+            <label style="width: 100px;">Last Name</label>
+            <input type="text" name="lastname" class="form-control" [(ngModel)]="data.lastname" required>
+        </div>
+          <div class="middleInner">
+              <label style="width: 100px;">Email</label>
+              <input type="text"  name="email" class="form-control" [(ngModel)]="data.email" readOnly required>
+          </div>
+          <div class="middleInner">
+              <label style="width: 100px;">Password</label>
+              <input type="text"  name="password" class="form-control" [(ngModel)]="data.password" minlength = "6" required>
+          </div>
+          <div class="middleInner">
+              <label style="width: 100px;">Birth Date</label>
+              <input type="text"  name="dob" class="form-control" [(ngModel)]="data.dob" required> 
+          </div>
+          <div class="middleInner">
+              <label style="width: 100px;">Gender</label>
+              <input type="text"  name="sex" class="form-control" [(ngModel)]="data.sex" required>
+          </div> 
+          <br> 
+        </div> 
+        <div class="down">
+            <button type="button" [routerLink] = "['/admin']" style="margin-left: 400px" class="btn btn-success">Back</button>
+            <button type="submit" style="margin-left: 275px" class="btn btn-success">Update</button>
+        </div>    
+        </form>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>

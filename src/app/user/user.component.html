@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+      <div class="top" >
+          <button type="button" (click)="logout()" class="btn btn-primary">Log Out</button>
+      </div>
+      <div class="middle">
+        <h1>Welcome {{data.firstname}}</h1>
+        <div class="middleInner">
+            <label style="width: 100px;">Name</label>
+            <input type="text" name="name" class="form-control" value="{{data.firstname}} {{data.lastname}}" readonly>
+        </div>
+        <div class="middleInner">
+            <label style="width: 100px;">Email</label>
+            <input type="text" name="email" class="form-control" value="{{data.email}}" readonly>
+        </div>
+        <div class="middleInner">
+            <label style="width: 100px;">Password</label>
+            <input type="text" name="password" class="form-control" value="{{data.password}}" readonly>
+        </div>
+        <div class="middleInner">
+            <label style="width: 100px;">Birth Date</label>
+            <input type="text" name="dob" class="form-control" value="{{data.dob}}" readonly>
+        </div>
+        <div class="middleInner">
+            <label style="width: 100px;">Gender</label>
+            <input type="text" name="gender" class="form-control" value="{{data.sex}}" readonly>
+        </div>    
+      </div>  
+  </div>
+</div>
+
+<router-outlet></router-outlet>
